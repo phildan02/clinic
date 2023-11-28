@@ -11,6 +11,7 @@ html {
 body {
     height: 100%;
     font-family: 'PT Sans Caption', sans-serif;
+    color: #364844;
 }
 
 .inner {
@@ -31,6 +32,7 @@ body {
         display: flex;
         align-items: center;
     }
+
     &__nav {
         height: 43px;
         width: 100%;
@@ -53,12 +55,11 @@ body {
     font-size: 14px;
     line-height: 21px;
     text-decoration: none;
+
     &__pin {
         grid-row: 1 / 3;
     }
-    &__city {
-        color: #364844;
-    }
+
     &__street {
         color: #E1E1E1;
     }
@@ -69,17 +70,17 @@ body {
     margin-left: auto;
     display: flex;
     align-items: center;
+
     &__tel {
         font-size: 16px;
         line-height: 24px;
         text-decoration: none;
-        color: #364844;
         margin-left: 9px;
+        color: inherit;
     }
 }
 
-.register-btn {
-    margin-left: 35px;
+.btn {
     background-color: #0DBC91;
     border: none;
     border-radius: 50px;
@@ -93,6 +94,20 @@ body {
     }
 }
 
+.outlined-btn {
+    background-color: transparent;
+    color: #0DBC91;
+    border: 1px solid #0DBC91;
+    &:hover {
+        background-color: #0DBC91;
+        color: #fff;
+    }
+}
+
+.register-btn {
+    margin-left: 35px;
+}
+
 .navbar {
     width: 1140px;
     padding-left: 1px;
@@ -100,12 +115,14 @@ body {
     line-height: 24px;
     display: flex;
     align-items: center;
+
     &__link {
         text-decoration: none;
         color: #fff;
         margin-right: 30px;
     }
-    & > :last-child {
+
+    &> :last-child {
         margin-right: 0;
     }
 }
@@ -117,13 +134,14 @@ body {
     &__info {
         margin-top: 144px;
     }
+
     &__title {
         width: 377px;
         font-size: 36px;
         line-height: 47px;
-        color: #364844;
         margin: 0;
     }
+
     &__descr {
         width: 367px;
         font-size: 16px;
@@ -131,6 +149,7 @@ body {
         margin: 0;
         margin-top: 14px;
     }
+
     &__img {
         position: absolute;
         right: 0;
@@ -143,11 +162,13 @@ body {
 
 .footer {
     background-color: #08664F;
+
     .navbar {
         width: auto;
         padding: 0;
         margin-bottom: 2px;
     }
+
     &__inner {
         height: 144px;
         display: flex;
@@ -158,6 +179,7 @@ body {
 
 .social-media {
     margin-bottom: 1px;
+
     &__link {
         margin-left: 15px;
         text-decoration: none;
@@ -165,7 +187,6 @@ body {
 }
 
 .slider {
-
     &__menu {
         display: flex;
         justify-content: space-between;
@@ -174,29 +195,118 @@ body {
         height: 34px;
         margin: 0 auto;
     }
-    &__arrow-left, &__arrow-right {
+
+    &__arrow-left,
+    &__arrow-right {
         height: 18px;
         padding: 0;
         background-color: transparent;
         border: none;
         cursor: pointer;
+
         img {
             display: block;
             margin: auto;
         }
     }
+
     &__counter {
         .slick-dots {
             display: none !important;
         }
     }
+
     &__counter-numbers {
         font-size: 18px;
         line-height: 23px;
         display: flex;
         color: #C0C0C0;
     }
-    &__current-number {
-        color: #364844;
+}
+
+.slide {
+    background-color: #E2F0EF;
+    width: 100%;
+    height: 440px;
+    display: flex !important;
+    justify-content: space-between;
+
+    &__descr {
+        max-width: 474px;
+        height: 100%;
+        padding: 53px 0 56px 63px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 38px;
+        line-height: 49px;
+        margin: 0;
+        margin-bottom: 2px;
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    &__features {
+        height: 108px;
+        list-style-type: none;
+        margin: 0 0 33px 16px;
+        padding: 0;
+    }
+
+    &__features-item {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 8px;
+        position: relative;
+    }
+    &__features-item::before {
+        content: '';
+        background-image: url(../images/list-marker.svg);
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        top: 7px;
+        left: -16px;
+    }
+    &__price-box {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 26px;
+    }
+    &__price {
+        &::after {
+            content: '₽';
+        }
+    }
+    &__price-old {
+        font-size: 16px;
+        line-height: 24px;
+        color: #868686;
+        text-decoration: line-through;
+        margin-left: 16px;
+        &::after {
+            content: '₽';
+        }
+    }
+    &__btn {
+        margin-right: 14px;
+    }
+
+    &__img-box {
+        height: 100%;
+        width: 645px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 18.3% 100%);
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }

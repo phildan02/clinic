@@ -3,7 +3,6 @@ $('.slider__inner').slick({
     slidesToScroll: 1,
     speed: 1000,
     dots: true,
-    infinite: false,
     appendDots: $('.slider__counter'),
     prevArrow: $('.slider__arrow-left'),
     nextArrow: $('.slider__arrow-right'),
