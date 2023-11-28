@@ -4,41 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./css/app.min.css">
     <title>Clinic</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__main">
-                <img class="logo" src="./images/logo.svg" alt="logo">
-                <div class="address">
-                    <img class="address__pin" src="./images/pin.svg" alt="pin">
-                    <span class="address__city">Ростов-на-Дону</span>
-                    <span class="address__street">ул. Ленина, 2Б</span>
+    <div class="inner">
+        <header class="header">
+            <div class="container default">
+                <div class="header__main">
+                    <a class="logo-link" href="#">
+                        <img class="logo-link__img" src="./images/logo.svg" alt="logo">
+                    </a>
+                    <a class="address" href="#">
+                        <img class="address__pin" src="./images/pin.svg" alt="pin">
+                        <span class="address__city">Ростов-на-Дону</span>
+                        <span class="address__street">ул. Ленина, 2Б</span>
+                    </a>
+                    <div class="contact">
+                        <img class="contact__logo" src="./images/social-media/whatsapp-colored.svg" alt="contact">
+                        <a class="contact__tel" href="tel:+78630000000">+7(863) 000 00 00</a>
+                    </div>
+                    <button class="register-btn">Записаться на прием</button>
                 </div>
-                <div class="contact">
-                    <img class="contact__logo" src="./images/social-media/whatsapp-colored.svg" alt="contact">
-                    <a class="contact__tel" href="tel:+78630000000">+7(863) 000 00 00</a>
-                </div>
-                <button class="register-btn">Записаться на прием</button>
             </div>
-        </div>
-        <div class="header__nav">
-            <nav class="navbar">
-                <a class="navbar__link" href="!#">О клинике</a>
-                <a class="navbar__link" href="!#">Услуги</a>
-                <a class="navbar__link" href="!#">Специалисты</a>
-                <a class="navbar__link" href="!#">Цены</a>
-                <a class="navbar__link" href="!#">Контакты</a>
-            </nav>
-        </div>
-    </header>
+            <div class="header__nav">
+                <nav class="navbar">
+                    <a class="navbar__link" href="#">О клинике</a>
+                    <a class="navbar__link" href="#">Услуги</a>
+                    <a class="navbar__link" href="#">Специалисты</a>
+                    <a class="navbar__link" href="#">Цены</a>
+                    <a class="navbar__link" href="#">Контакты</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="welcome-banner">
+                    <div class="welcome-banner__info">
+                        <h1 class="welcome-banner__title">Многопрофильная клиника для детей и взрослых</h1>
+                        <p class="welcome-banner__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                    <img class="welcome-banner__img" src="./images/child-corner.png" alt="child corner">
+                </div>
+                <div class="slider">
+                    <div class="slider__inner">
+                        <div>Слайд 1</div>
+                        <div>Слайд 2</div>
+                        <div>Слайд 3</div>
+                    </div>
+                    <div class="slider__menu">
+                        <button class="slider__arrow-left">
+                            <img src="./images/arrow-left.svg" alt="arrow left">
+                        </button>
+                        <div class="slider__counter">
+                            <div class="slider__counter-numbers">
+                                <span class="slider__current-number"></span>
+                                <span>/</span>
+                                <span class="slider__total-number"></span>
+                            </div>
+                        </div>
+                        <button class="slider__arrow-right">
+                            <img src="./images/arrow-right.svg" alt="arrow right">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <a class="logo-link" href="#">
+                        <img class="logo-link__img" src="./images/logo-white.svg" alt="logo">
+                    </a>
+                    <nav class="navbar">
+                        <a class="navbar__link" href="#">О клинике</a>
+                        <a class="navbar__link" href="#">Услуги</a>
+                        <a class="navbar__link" href="#">Специалисты</a>
+                        <a class="navbar__link" href="#">Цены</a>
+                        <a class="navbar__link" href="#">Контакты</a>
+                    </nav>
+                    <div class="social-media">
+                        <a class="social-media__link" href="#">
+                            <img src="./images/social-media/instagram.svg" alt="instagram">
+                        </a>
+                        <a class="social-media__link" href="#">
+                            <img src="./images/social-media/whatsapp.svg" alt="whatsapp">
+                        </a>
+                        <a class="social-media__link" href="#">
+                            <img src="./images/social-media/telegram.svg" alt="telegram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/app.min.js"></script>
 </body>
 
