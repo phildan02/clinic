@@ -1,0 +1,142 @@
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0 17px;
+    }
+
+    .header {
+        &__main {
+            position: relative;
+        }
+
+        &__logo-link {
+            margin: 0;
+            margin-left: 43px;
+            width: 62px;
+            height: 18.32px;
+        }
+
+        &__contact-tel {
+            position: absolute;
+            top: 14px;
+            right: 2px;
+            margin: 0;
+            font-weight: bold;
+            line-height: 21px;
+        }
+
+        &__address-city {
+            position: absolute;
+            bottom: 13px;
+            right: 2px;
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        &__address-pin {
+            display: none;
+        }
+
+        &__address-street {
+            display: none;
+        }
+
+        &__contact-logo {
+            display: none;
+        }
+
+        &__register-btn {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 21px;
+            color: #1FA181;
+            background-color: #F6F6F6;
+            margin-left: 0;
+            position: absolute;
+            bottom: -290px;
+            left: 3px;
+            z-index: 10;
+        }
+
+        &__nav {
+            width: auto;
+            height: calc(100vh - 67px);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-color: #45927F;
+            position: absolute;
+            z-index: 9;
+        }
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__link {
+            margin-right: 0;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 425px) {
+            padding: 48px 19px;
+        }
+    }
+
+    .burger-icon {
+        display: grid;
+        place-items: center;
+        width: 37px;
+        height: 29px;
+        cursor: pointer;
+        overflow: hidden;
+
+        & span {
+            width: 100%;
+            height: 4px;
+            display: block;
+            background-color: #1FA181;
+            transition: all 0.3s ease-in-out;
+
+            &:nth-child(1) {
+                margin-top: 1.5px;
+                align-self: start;
+            }
+
+            &:nth-child(2) {
+                align-self: center;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: 1.5px;
+                align-self: end;
+            }
+        }
+
+        &.active span {
+            &:nth-child(1) {
+                transform-origin: center center;
+                transform: rotate(-45deg) translate(-14%, 254%);
+            }
+
+            &:nth-child(2) {
+                transform: translateX(40px);
+            }
+
+            &:nth-child(3) {
+                transform-origin: center center;
+                transform: rotate(45deg) translate(-15%, -254%);
+            }
+        }
+    }
+}

@@ -10,8 +10,8 @@ $('.slider__inner').slick({
     slidesToScroll: 1,
     speed: 3000,
     dots: true,
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     pauseOnDotsHover: true,
     appendDots: $('.slider__counter'),
     prevArrow: $('.slider__arrow-left'),
@@ -41,4 +41,8 @@ $('.slick-arrow').on('focus', () => {
 });
 $('.slick-arrow').on('blur', () => {
     slickPlay();
+});
+
+$('.burger-icon').on('click', () => {
+    $('.burger-icon').toggleClass('active');
 });
