@@ -1,4 +1,4 @@
-$('.slider__inner').on('init', function(...args){
+$('.slider__inner').on('init', function (...args) {
     const slideCount = args[1].slideCount;
     const currentSlide = args[1].currentSlide + 1;
     $('.slider__total-number').html(slideCount);
@@ -18,7 +18,7 @@ $('.slider__inner').slick({
     nextArrow: $('.slider__arrow-right'),
 });
 
-$('.slider__inner').on('afterChange', function(...args){
+$('.slider__inner').on('afterChange', function (...args) {
     const currentSlide = args[2] + 1;
     $('.slider__current-number').html(currentSlide);
 });
@@ -46,3 +46,23 @@ $('.slick-arrow').on('blur', () => {
 $('.burger-icon').on('click', () => {
     $('.burger-icon').toggleClass('active');
 });
+
+async function sendServer() {
+    let response = await fetch('/mail.php', {
+        method: 'POST',
+        body: JSON.stringify({
+            firstName: 'James',
+            lastName: 'Nelson',
+            telNumber: '+7-912-345-67-89',
+        }),
+    });
+
+    if (response.ok) {
+        let text = await response.text();
+        console.log(text);
+    } else {
+        console.log("Ошибка HTTP: " + response.status);
+    }
+}
+
+$('.send-btn').on('click', sendServer);

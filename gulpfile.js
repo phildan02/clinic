@@ -11,9 +11,9 @@ const clean = require('gulp-clean');
 
 function browsersync() {
 	browserSync.init({
-		server: { baseDir: 'app/' },
-		notify: false,
-		online: true
+        server: {
+            baseDir: './app',
+        }
 	})
 }
  
@@ -57,9 +57,10 @@ function startwatch() {
 	watch('app/**/*.html').on('change', browserSync.reload);
 }
 
-exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
+exports.browsersync = browsersync;
+exports.startwatch = startwatch;
 
 exports.build = series(cleandist, styles, scripts, buildcopy);
 exports.default = parallel(styles, scripts, browsersync, startwatch);
