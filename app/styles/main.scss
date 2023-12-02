@@ -21,6 +21,10 @@ body {
     justify-content: space-between;
 }
 
+main {
+    flex-grow: 1;
+}
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -142,9 +146,13 @@ body {
 }
 
 .welcome-banner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     height: 533px;
     margin-bottom: 83px;
+    background-color: #F8FBFA;
 
     &__info {
         margin-top: 144px;
@@ -188,8 +196,7 @@ body {
         margin-bottom: 50px;
 
         &__info {
-            margin-top: 25px;
-            margin-left: 20px;
+            margin: 25px 20px;
         }
 
         &__title {
