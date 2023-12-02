@@ -154,9 +154,13 @@
     }
 
     .welcome-banner {
-        width: 100%;
         margin: 0;
-        padding: 0 17px;
+        
+        &__inner {
+            width: 100%;
+            margin: 0;
+            padding: 0 17px;
+        }
 
         &__info {
             margin: 0;

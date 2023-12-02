@@ -146,13 +146,15 @@ main {
 }
 
 .welcome-banner {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    height: 533px;
-    margin-bottom: 83px;
     background-color: #F8FBFA;
+
+    &__inner {
+        display: flex;
+        max-width: 1180px;
+        margin: 0 auto 83px;
+        padding: 0 20px;
+        height: 533px;
+    }
 
     &__info {
         margin-top: 144px;
@@ -192,8 +194,11 @@ main {
     }
 
     @media (max-width: 1180px) {
-        height: auto;
-        margin-bottom: 50px;
+        &__inner {
+            height: auto;
+            margin-bottom: 50px;
+            flex-direction: column;
+        }
 
         &__info {
             margin: 25px 20px;
@@ -215,8 +220,6 @@ main {
             margin-left: -20px;
             object-position: left 75%;
         }
-
-        flex-direction: column;
     }
 }
 
