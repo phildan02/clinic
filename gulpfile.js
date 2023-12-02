@@ -43,6 +43,7 @@ function buildcopy() {
 		'app/js/**/*.min.js',
 		'app/images/**/*',
 		'app/**/*.html',
+        'app/php/**/*.php'
 		], { base: 'app' })
 	.pipe(dest('dist'))
 }

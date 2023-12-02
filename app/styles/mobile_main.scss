@@ -1,4 +1,11 @@
 @media (max-width: 768px) {
+    .body-inner {
+        &_burger-opened {
+            height: 100vh;
+            overflow: hidden;
+        }
+    }
+
     .container {
         width: 100%;
         margin: 0;
@@ -47,34 +54,37 @@
         }
 
         &__register-btn {
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 21px;
-            color: #1FA181;
-            background-color: #F6F6F6;
-            margin-left: 0;
-            position: absolute;
-            bottom: -290px;
-            left: 3px;
-            z-index: 10;
+            display: none;
+            &_nav {
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 21px;
+                color: #1FA181;
+                background-color: #F6F6F6;
+                margin-top: 40px;
+            }
         }
 
         &__nav {
+            display: none;
+            position: absolute;
             width: auto;
-            height: calc(100vh - 67px);
+            height: calc(100% - 67px);
+            top: 67px;
             left: 0;
             right: 0;
-            bottom: 0;
-            display: block;
             background-color: #45927F;
-            position: absolute;
-            z-index: 9;
+            z-index: 999;
+            &_active {
+                display: block;
+            }
         }
     }
 
     .navbar {
         width: 100%;
-        height: 100%;
+        height: auto;
         font-size: 16px;
         line-height: 24px;
         padding: 48px;
@@ -84,7 +94,7 @@
         &__link {
             margin-right: 0;
             margin-bottom: 10px;
-            &:last-child {
+            &:nth-last-child(2) {
                 margin-bottom: 0;
             }
         }
@@ -137,6 +147,25 @@
                 transform-origin: center center;
                 transform: rotate(45deg) translate(-15%, -254%);
             }
+        }
+    }
+
+    .welcome-banner {
+        &__info {
+            margin: 0;
+            padding: 35px 17px 53px;
+        }
+        &__title {
+            width: 267px;
+            font-size: 26px;
+            line-height: 24px;
+            margin-bottom: 9px;
+        }
+        &__descr {
+            width: auto;
+            font-size: 14px;
+            line-height: 150%;
+            margin: 0;
         }
     }
 }

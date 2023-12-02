@@ -43,12 +43,35 @@ $('.slick-arrow').on('blur', () => {
     slickPlay();
 });
 
+function navbarHeightDefine() {
+    if ($('.header__nav').hasClass('.header__nav_active')) {
+        if ($('.navbar').outerHeight() > 0) {
+            const headerSize = $('.navbar_active').outerHeight() + $('.header').outerHeight(true);
+            if (document.documentElement.clientHeight < headerSize) {
+                $('.header__nav').css('height', 'auto');
+            } else {
+                $('.header__nav').css('height', `calc(100% - ${$('.header').outerHeight(true)}px)`);
+            }
+        }
+    }
+}
+
+$(window).resize(navbarHeightDefine);
+
 $('.burger-icon').on('click', () => {
-    $('.burger-icon').toggleClass('active');
+    $('.burger-icon').toggleClass('.burger-icon_active');
+    $('.body-inner').toggleClass('body-inner_burger-opened');
+    $('.header__nav').toggleClass('.header__nav_active');
+
+    navbarHeightDefine();
 });
 
+
+
+
+
 async function sendServer() {
-    let response = await fetch('/mail.php', {
+    let response = await fetch('/php/mail.php', {
         method: 'POST',
         body: JSON.stringify({
             firstName: 'James',

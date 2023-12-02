@@ -12,7 +12,6 @@ body {
     height: 100%;
     font-family: 'PT Sans Caption', sans-serif;
     color: #364844;
-    background-color: #00D29F;
 }
 
 .body-inner {
@@ -91,6 +90,9 @@ body {
 
     &__register-btn {
         margin-left: 35px;
+        &_nav {
+            display: none;
+        }
     }
 }
 
