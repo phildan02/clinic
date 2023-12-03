@@ -86,23 +86,46 @@
     }
 
     .navbar {
-        width: 100%;
-        height: auto;
-        font-size: 16px;
-        line-height: 24px;
-        padding: 48px;
-        flex-direction: column;
-        align-items: flex-start;
+        &_header {
+            width: 100%;
+            height: auto;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 48px;
+            flex-direction: column;
+            align-items: flex-start;
 
-        &__link {
-            margin-right: 0;
-            margin-bottom: 10px;
-            &:nth-last-child(2) {
-                margin-bottom: 0;
+            @media (max-width: 425px) {
+                padding: 48px 19px;
             }
         }
-        @media (max-width: 425px) {
-            padding: 48px 19px;
+
+        &_footer {
+            margin-bottom: 0;
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 41px;
+        }
+
+        &__link {
+            &_header {
+                margin-right: 0;
+                margin-bottom: 10px;
+                &:nth-last-child(2) {
+                    margin-bottom: 0;
+                }
+            }
+            &_footer {
+                font-size: 14px;
+                line-height: 18px;
+                margin-right: 0;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 
@@ -136,7 +159,7 @@
             }
         }
 
-        &.active span {
+        &_active span {
             &:nth-child(1) {
                 transform-origin: center center;
                 transform: rotate(-45deg) translate(-14%, 254%);
@@ -154,7 +177,7 @@
     }
 
     .welcome-banner {
-        margin: 0;
+        margin-bottom: 49px;
         
         &__inner {
             width: 100%;
@@ -182,6 +205,116 @@
             margin-left: -17px;
             height: 288px;
             object-position: center;
+        }
+    }
+
+    .logo-link {
+        &_footer {
+            align-self: self-start;
+            margin-top: 42px;
+        }
+    }
+
+    .footer {
+        &__inner {
+            height: auto;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100px 1fr;
+        }
+
+        &__social-media {
+            width: auto;
+            margin-top: 46px;
+            margin-bottom: 0;
+            flex-direction: row;
+            align-self: self-start;
+            justify-self: self-end;
+        }
+
+        &__social-media-link {
+            line-height: 0;
+            margin-bottom: 0;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                height: 23px;
+            }
+        }
+    }
+
+    .slider {
+        margin-bottom: 35px;
+
+        &__inner {
+            margin-bottom: 22px;
+            left: -17px;
+            height: auto;
+        }
+    }
+
+    .slide {
+        padding: 0 17px;
+        display: flex !important;
+        flex-direction: column;
+        height: auto;
+
+        &__bg {
+            width: calc(100vw - 34px);
+        }
+
+        &__img-box {
+            clip-path: none;
+            order: -1;
+            height: 275px;
+
+        }
+
+        &__img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        &__descr {
+            width: auto !important;
+            padding: 22px 23px 42px;
+            max-width: none;
+        }
+
+        &__title {
+            font-size: 26px;
+            line-height: 34px;
+            margin-bottom: 5px;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 12px;
+        }
+
+        &__features {
+            height: auto;
+            margin-bottom: 17px;
+        }
+
+        &__features-item {
+            font-size: 14px;
+            line-height: 145%;
+        }
+
+        &__price-box {
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        &__price-old {
+            font-size: 14px;
+            line-height: 18px;
+            margin-left: 10px;
         }
     }
 }

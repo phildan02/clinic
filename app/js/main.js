@@ -10,8 +10,8 @@ $('.slider__inner').slick({
     slidesToScroll: 1,
     speed: 3000,
     dots: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
+    // autoplay: true,
+    // autoplaySpeed: 1000,
     pauseOnDotsHover: true,
     appendDots: $('.slider__counter'),
     prevArrow: $('.slider__arrow-left'),
@@ -44,10 +44,11 @@ $('.slick-arrow').on('blur', () => {
 });
 
 function navbarHeightDefine() {
-    if ($('.header__nav').hasClass('.header__nav_active')) {
-        if ($('.navbar').outerHeight() > 0) {
-            const headerSize = $('.navbar_active').outerHeight() + $('.header').outerHeight(true);
-            if (document.documentElement.clientHeight < headerSize) {
+    if ($('.header__nav').hasClass('header__nav_active')) {
+        if ($('.navbar_header').outerHeight() > 0) {
+            const headerNavSize = $('.navbar_header').outerHeight() + $('.header').outerHeight(true);
+            console.log(headerNavSize);
+            if (document.documentElement.clientHeight < headerNavSize) {
                 $('.header__nav').css('height', 'auto');
             } else {
                 $('.header__nav').css('height', `calc(100% - ${$('.header').outerHeight(true)}px)`);
@@ -59,9 +60,9 @@ function navbarHeightDefine() {
 $(window).resize(navbarHeightDefine);
 
 $('.burger-icon').on('click', () => {
-    $('.burger-icon').toggleClass('.burger-icon_active');
+    $('.burger-icon').toggleClass('burger-icon_active');
     $('.body-inner').toggleClass('body-inner_burger-opened');
-    $('.header__nav').toggleClass('.header__nav_active');
+    $('.header__nav').toggleClass('header__nav_active');
 
     navbarHeightDefine();
 });
