@@ -8,7 +8,7 @@ $('.slider__inner').on('init', function (...args) {
 $('.slider__inner').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 3000,
+    speed: 1500,
     dots: true,
     // autoplay: true,
     // autoplaySpeed: 1000,
@@ -47,7 +47,6 @@ function navbarHeightDefine() {
     if ($('.header__nav').hasClass('header__nav_active')) {
         if ($('.navbar_header').outerHeight() > 0) {
             const headerNavSize = $('.navbar_header').outerHeight() + $('.header').outerHeight(true);
-            console.log(headerNavSize);
             if (document.documentElement.clientHeight < headerNavSize) {
                 $('.header__nav').css('height', 'auto');
             } else {
@@ -66,6 +65,16 @@ $('.burger-icon').on('click', () => {
 
     navbarHeightDefine();
 });
+
+
+$('.register-btn').on('click', () => {
+    $('.body-inner').toggleClass('body-inner_modal-active');
+    $('.modal-register').toggleClass('modal-register_active');
+    $('.modal-register__inner').toggleClass('modal-register__inner_active');
+});
+
+
+
 
 
 

@@ -19,6 +19,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &_modal-active {
+        overflow: hidden !important;
+    }
 }
 
 main {
@@ -441,6 +445,10 @@ main {
         margin-right: 14px;
     }
 
+    &__outlined-btn {
+        margin-right: 0;
+    }
+
     &__img-box {
         height: 100%;
         width: 645px;
@@ -493,6 +501,52 @@ main {
 
         &__price-old {
             margin-left: 8px;
+        }
+    }
+}
+
+
+.modal-register {
+    opacity: 0;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: rgba(207, 207, 207, 0.9);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+    transition: opacity .3s ease-out;
+
+    &_active {
+        z-index: 999;
+        opacity: 1;
+    }
+
+    &__inner {
+        width: 500px;
+        height: 500px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        background-color: rgb(229, 229, 229);
+        transform: translateY(calc(-50vh - 55%));
+        transition: transform .5s ease-out;
+        &_active {
+            transform: translateY(0);
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__form {
+        label {
+            display: block;
         }
     }
 }
