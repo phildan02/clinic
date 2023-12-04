@@ -328,4 +328,27 @@
             width: 100%;
         }
     }
+
+    .modal-register {
+        &__inner {
+            @media (max-width: 550px) {
+                width: 90%;
+            }
+        }
+
+        &__title {
+            @media (max-width: 400px) {
+                width: 140px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 13px;
+            }
+        }
+
+        &__form {
+            @media (max-width: 322px) {
+                font-size: 15px;
+            }
+        }
+    }
 }

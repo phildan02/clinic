@@ -198,16 +198,24 @@
         </footer>
     </div>
 
-    <div class="modal-register">
-        <div class="modal-register__inner">
-            <h1 class="modal-register__title">Заполните форму</h1>
+    <div class="modal-register modal-register_active">
+        <div class="modal-register__inner modal-register__inner_active">
+            <h2 class="modal-register__title">Заполните форму</h2>
+            <button class="modal-register__btn-close">&#11198;</button>
             <form action="" class="modal-register__form">
-                <label for="fname">Имя</label>
-                <input type="text" id="fname" name="firstname" placeholder="Ваше имя...">
+                <label class="modal-register__label-input" for="fname">Имя</label>
+                <input class="modal-register__input" type="text" id="fname" name="firstname" placeholder="Ваше имя...">
 
-                <label for="lname">Фамилия</label>
-                <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия...">
+                <label class="modal-register__label-input" for="lname">Фамилия</label>
+                <input class="modal-register__input" type="text" id="lname" name="lastname" placeholder="Ваша фамилия...">
 
+                <label class="modal-register__label-input" for="telnum">Номер телефона</label>
+                <input class="modal-register__input" type="text" id="telnum" name="telnum" placeholder="Ваш номер телефона...">
+
+                <label class="modal-register__label-input" for="email">Адрес электронной почты</label>
+                <input class="modal-register__input" type="text" id="email" name="email" placeholder="Ваш e-mail...">
+
+                <button class="modal-register__btn btn" type="submit">Отправить</button>
             </form>
         </div>
     </div>

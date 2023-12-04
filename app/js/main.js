@@ -66,15 +66,38 @@ $('.burger-icon').on('click', () => {
     navbarHeightDefine();
 });
 
+function bodyInnerToggleClass({data: {action}}) {
+    if (action === 'add') {
+        $('.body-inner').addClass('body-inner_modal-active');
+    } else if (action === 'remove') {
+        $('.body-inner').removeClass('body-inner_modal-active');
+    }
+}
 
 $('.register-btn').on('click', () => {
-    $('.body-inner').toggleClass('body-inner_modal-active');
-    $('.modal-register').toggleClass('modal-register_active');
-    $('.modal-register__inner').toggleClass('modal-register__inner_active');
+    bodyInnerToggleClass({data: {action: 'add'}});
+    $('.modal-register').addClass('modal-register_active');
+    $('.modal-register__inner').addClass('modal-register__inner_active');
+    $('.modal-register').removeClass('modal-register_disabled')
 });
 
+$('.modal-register__btn-close').on('click', () => {
+    bodyInnerToggleClass({data: {action: 'remove'}});
+    $('.modal-register').removeClass('modal-register_active');
+    $('.modal-register__inner').removeClass('modal-register__inner_active');
+    $('.modal-register').addClass('modal-register_disabled');
+    $(window).off('scrollend', bodyInnerToggleClass);
+});
 
-
+$('.slide__btn').on('click', () => {
+    bodyInnerToggleClass({data: {action: 'remove'}});
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+    $(window).on('scrollend', {action: 'add'}, bodyInnerToggleClass);
+});
 
 
 
