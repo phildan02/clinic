@@ -596,6 +596,28 @@ main {
         }
     }
 
+    &__send-info {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 87px;
+        padding: 0 40px;
+        width: 100%;
+
+        @media (max-width: 382px) {
+            font-size: 12px;
+        }
+
+        &_incorrect {
+            display: block;
+            color: red;
+        }
+        &_success {
+            display: block;
+            color: rgb(95, 189, 0);
+        }
+    }
+
     &__btn {
         display: block;
         margin: 25px auto 0;

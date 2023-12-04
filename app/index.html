@@ -80,8 +80,8 @@
                                     <span class="slide__price-old">3500</span>
                                 </div>
                                 <div class="slide__btn-box">
-                                    <button class="slide__btn register-btn btn">Записаться</button>
-                                    <button class="slide__btn slide__outlined-btn btn outlined-btn">Подробнее</button>
+                                    <button class="slide__btn slide__register-btn register-btn btn">Записаться</button>
+                                    <button class="slide__btn slide__outlined-btn outlined-btn btn">Подробнее</button>
                                 </div>
                             </div>
                             <div class="slide__img-box">
@@ -105,8 +105,8 @@
                                     <span class="slide__price-old">3500</span>
                                 </div>
                                 <div class="slide__btn-box">
-                                    <button class="slide__btn register-btn btn">Записаться</button>
-                                    <button class="slide__btn slide__outlined-btn btn outlined-btn">Подробнее</button>
+                                    <button class="slide__btn slide__register-btn register-btn btn">Записаться</button>
+                                    <button class="slide__btn slide__outlined-btn outlined-btn btn">Подробнее</button>
                                 </div>
                             </div>
                             <div class="slide__img-box">
@@ -130,8 +130,8 @@
                                     <span class="slide__price-old">3500</span>
                                 </div>
                                 <div class="slide__btn-box">
-                                    <button class="slide__btn register-btn btn">Записаться</button>
-                                    <button class="slide__btn slide__outlined-btn btn outlined-btn">Подробнее</button>
+                                    <button class="slide__btn slide__register-btn register-btn btn">Записаться</button>
+                                    <button class="slide__btn slide__outlined-btn outlined-btn btn">Подробнее</button>
                                 </div>
                             </div>
                             <div class="slide__img-box">
@@ -198,25 +198,29 @@
         </footer>
     </div>
 
-    <div class="modal-register modal-register_active">
-        <div class="modal-register__inner modal-register__inner_active">
+    <div class="modal-register">
+        <div class="modal-register__inner">
             <h2 class="modal-register__title">Заполните форму</h2>
             <button class="modal-register__btn-close">&#11198;</button>
-            <form action="" class="modal-register__form">
+            <form action="#!" class="modal-register__form">
                 <label class="modal-register__label-input" for="fname">Имя</label>
                 <input class="modal-register__input" type="text" id="fname" name="firstname" placeholder="Ваше имя...">
 
                 <label class="modal-register__label-input" for="lname">Фамилия</label>
-                <input class="modal-register__input" type="text" id="lname" name="lastname" placeholder="Ваша фамилия...">
+                <input class="modal-register__input" type="text" id="lname" name="lastname"
+                    placeholder="Ваша фамилия...">
 
                 <label class="modal-register__label-input" for="telnum">Номер телефона</label>
-                <input class="modal-register__input" type="text" id="telnum" name="telnum" placeholder="Ваш номер телефона...">
+                <input class="modal-register__input" type="text" id="telnum" name="telnum"
+                    placeholder="Ваш номер телефона...">
 
                 <label class="modal-register__label-input" for="email">Адрес электронной почты</label>
                 <input class="modal-register__input" type="text" id="email" name="email" placeholder="Ваш e-mail...">
 
+                <span class="modal-register__send-info"></span>
                 <button class="modal-register__btn btn" type="submit">Отправить</button>
             </form>
+
         </div>
     </div>
 
