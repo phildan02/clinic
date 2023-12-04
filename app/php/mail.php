@@ -33,7 +33,7 @@
             $mail->setFrom('phildan02@yandex.ru', 'register@clinic.ru');
             $mail->addReplyTo($form_email, $form_firstname);
     
-            $mail->addAddress('phildan02@gmail.com');
+            $mail->addAddress('rbru-metrika@yandex.ru');
     
             $mail->isHTML(true);
             $mail->Subject = $title;
